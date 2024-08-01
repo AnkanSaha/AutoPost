@@ -6,6 +6,7 @@ import { TokenInterface, GeneralInterface } from "../Interface/credentials.inter
 
 export const Token: TokenInterface = {
     GEMINI_TOKEN: String(process.env.GEMINI_API_KEY),
+    DEV_TO_API_KEY: String(process.env.DEV_TO_API_KEY),
 }
 
 export const General: GeneralInterface = {

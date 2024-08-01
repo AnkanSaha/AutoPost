@@ -1,6 +1,6 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import express from "express";
 import {ClassBased} from 'outers'
-import fs from 'fs';
 
 import {GenerateFullPost} from "./Generator/Generator";
 
@@ -19,6 +19,6 @@ ClusterConfig.SetNumberOfWorkers(1);
 // Start the server
 ClusterConfig.StartServer();
 
-GenerateFullPost().then((response) => {
-    fs.writeFileSync('source/FullPost.json', JSON.stringify(response));
+GenerateFullPost().then((response: any) => {
+   console.log("Full Post Response: ", response)
 });
