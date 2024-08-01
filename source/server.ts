@@ -1,4 +1,4 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
+ 
 import express from "express";
 import {ClassBased} from 'outers'
 import AutoCron from "./cron/AutoCron";
