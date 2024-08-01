@@ -1,5 +1,6 @@
 import express from "express";
 import {ClassBased} from 'outers'
+import fs from 'fs';
 
 import {GenerateFullPost} from "./Generator/Generator";
 
@@ -19,5 +20,5 @@ ClusterConfig.SetNumberOfWorkers(1);
 ClusterConfig.StartServer();
 
 GenerateFullPost().then((response) => {
-    console.log(response)
+    fs.writeFileSync('source/FullPost.json', JSON.stringify(response));
 });
