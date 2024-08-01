@@ -4,11 +4,16 @@
   "description": "this is for automate post",
   "main": "server.js",
   "scripts": {
-    "init": "tsc --init"
+    "init": "tsc --init",
+    "lint": "eslint ./source/**/*.{js,ts} --fix",
+    "build": "npm run lint && tsc && cp package.json ./AutoPost/ && cp package-lock.json ./AutoPost/",
+    "dev": "ts-node source/server.ts --watch",
+    "start": "pm2 start ./server.js --name AutoPost --max-memory-restart 200M -f",
+    "stop": "pm2 stop AutoPost"
   },
   "repository": {
     "type": "git",
-    "url": "git"
+    "url": "https://github.com/AnkanSaha/AutoPost"
   },
   "keywords": [
     "Automate"
@@ -16,6 +21,14 @@
   "author": "Ankan Saha",
   "license": "MIT",
   "dependencies": {
+    "nodemon": "^3.1.4",
+    "ts-node": "^10.9.2",
     "typescript": "^5.5.4"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.8.0",
+    "eslint": "^9.8.0",
+    "globals": "^15.9.0",
+    "typescript-eslint": "^8.0.0"
   }
 }
