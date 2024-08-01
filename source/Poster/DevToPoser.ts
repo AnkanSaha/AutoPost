@@ -14,7 +14,7 @@ export default async function DevToPoster(fullPostDetails: any) {
                     "title": fullPostDetails[i].topic,
                     "body_markdown": fullPostDetails[i].content,
                     "published": true,
-                    "tags": ["javascript", "webdev", "beginners", "productivity"],
+                    "tags": fullPostDetails[i].tags,
                 }
             })
         }).then((response) => {
