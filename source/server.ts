@@ -6,7 +6,6 @@ import { General } from "./config/credentials";
 
 const ExpressServer = express();
 
-
 // Initialize the server
 const ClusterConfig = new ClassBased.ClusterCreator(ExpressServer, General.PORT);
 
