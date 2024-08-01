@@ -21,6 +21,8 @@
   "author": "Ankan Saha",
   "license": "MIT",
   "dependencies": {
+    "@google/generative-ai": "^0.16.0",
+    "dotenv": "^16.4.5",
     "nodemon": "^3.1.4",
     "ts-node": "^10.9.2",
     "typescript": "^5.5.4"
