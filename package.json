@@ -1,0 +1,21 @@
+{
+  "name": "AutoPost",
+  "version": "1.0.1",
+  "description": "this is for automate post",
+  "main": "server.js",
+  "scripts": {
+    "init": "tsc --init"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git"
+  },
+  "keywords": [
+    "Automate"
+  ],
+  "author": "Ankan Saha",
+  "license": "MIT",
+  "dependencies": {
+    "typescript": "^5.5.4"
+  }
+}
