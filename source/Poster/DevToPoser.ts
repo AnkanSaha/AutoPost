@@ -5,7 +5,7 @@ import { post } from 'axios';
 export default async function DevToPoster(fullPostDetails: any) {
     console.log("FullPostDetails on DevTo", fullPostDetails);
     for(let i = 0; i < fullPostDetails.length; i++) {
-        const response = await post("https://dev.to/api/articles", {
+        await post("https://dev.to/api/articles", {
             article: {
                 "title": fullPostDetails[i].topic,
                 "body_markdown": fullPostDetails[i].content,
@@ -18,7 +18,5 @@ export default async function DevToPoster(fullPostDetails: any) {
                 "api-key": Token.DEV_TO_API_KEY
             }
         });
-
-        console.log("DevTo Response", response.data);
     }
 }

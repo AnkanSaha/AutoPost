@@ -22,5 +22,5 @@ export default () => {
         `Running cron job for Daily Post Generation at ${new Date().toLocaleString()}`
       );
       await PostToSocialMedia();
-    }, 5, true);
+    }, 2, true);
 };
