@@ -17,11 +17,10 @@ export const PostToSocialMedia = async () => {
 
 export default () => {
   // Schedule the cron job to run every night at 12 AM
-  // cron.schedule("0 0 7,9,12,14,16,18,20,22,0,2,4,6 * * *", async () => {
-    Console.green(
-      `Running cron job for Daily Post Generation at ${new Date().toLocaleString()}`
-    );
-    Retry.Minutes(async ()=> {
+    Retry.Hours(async ()=> {
+      Console.green(
+        `Running cron job for Daily Post Generation at ${new Date().toLocaleString()}`
+      );
       await PostToSocialMedia();
     }, 1, true);
   // });
