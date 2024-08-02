@@ -18,7 +18,9 @@ export default async function DevToPoster(fullPostDetails: any) {
                 }
             })
         }).then((response) => {
-            console.log("Response: ", response)
+            response.json().then((data) => {
+                console.log(data)
+            })
         })
     }
 }
